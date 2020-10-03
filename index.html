@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <title>Meu site</title>
+        <link rel="stylesheet" href="./main.css">
+        <script src="https://kit.fontawesome.com/fcfbd13f18.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <!--<div class="menu-esquerda">
+                <div class="top">
+                    <h1>Matheus Paixão</h1>
+                    <h3>aluno</h3>
+                    <h5>CIn-UFPE</h5>
+                </div>
+                <div class="bottom">
+                    <h4>Endereço:</h4>
+                    <p>R Z A, 895</p>
+                    <h4>Telefone:</h4>
+                    <p>algum número</p>
+                    
+                </div>-->
+                
+            </div>
+            <div class="abrir_menu" onclick="abrir_menu()">                
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="fechar_menu" onclick="fechar_menu()"></div>
+            <div class="menu_aberto">
+                <ul class="ul_container">
+                  <li><a href="#home" onclick="fechar_menu()">Home</a></li>
+                  <li><a href="#sobre" onclick="fechar_menu()">Sobre</a></li>
+                  <li><a href="#hobbies" onclick="fechar_menu()">Hobbies</a></li>
+                  <li><a href="#experiencias" onclick="fechar_menu()">Experiências</a></li>
+                </ul>
+            </div>
+            <nav class="menu">
+                <ul class="header">
+                    <li class="home-header"><a href="#home">Home</a></li>
+                    <li class="sobre-header"><a href="#sobre">Sobre</a></li>
+                    <li class="hobbies-header"><a href="#hobbies">Hobbies</a></li>
+                    <li class="experiencias"><a href="#experiencias">Experiências</a></li>
+                </ul>
+            </nav>
+            <main class="main">
+                <section class="section" id="home">
+                    <section class="home-section">
+                        <img class="profile-photo" src="./imagens/IMG-20200228-WA0011 (4).jpeg" alt="sem foto"/>
+                        <div class="top">
+                            <h1>Matheus Paixão</h1>
+                            <h3>Aluno</h3>
+                            <h5>CIn-UFPE</h5>
+                        </div>
+                        <div class="bottom">
+                            <div class="end-tel">
+                                <h4>Endereço:</h4>
+                                <p>Rua Zeferino Agra, 895</p>
+                            </div>
+                            <div class="end-tel">
+                                <h4>Telefone:</h4>
+                                <p>(81) 99600-7699</p>
+                            </div>
+                        </div>
+                    </section>
+                    <hr/>
+                    <section class="sobre-section" id="sobre">
+                        <h2>Sobre</h2>
+                        <div class="paragrafos">
+                            <p>Olá, meu nome é Matheus!</p>
+                            <p>
+                                Quando eu era menor, eu costumava construir coisas usando sucata. Era
+                                bem divertido, pois eu conseguia fazer coisas legais utilizando o material
+                                que iria para o lixo. Já consegui fazer até um carrinho com isso.
+                            </p>
+                            <p>
+                                Em 2019, eu terminei o ensino médio e agora estou cursando o primeiro período em Ciências da Computação
+                                na UFPE. Sempre gostei de mexer no computador, mas, no início, pensei em cursar física na faculdade,
+                                já que também gosto bastante de matemática. Depois de pensar bastante, inclusive com ajuda externa, 
+                                decidi tentar o ENEM para computação mesmo, e passei. 
+                            </p>
+                        </div>
+                    </section>
+                    <hr/>
+                    <section class="hobbies-section" id="hobbies">
+                        <h2>Hobbies</h2>
+                        <div class="hobbies-div">
+                            <div class="hobbies-vertical">
+                                <div class="flip-container">
+                                    <div class="flipper">
+                                        <div class="front">
+                                            <img src="./imagens/league_of_legends.jpg" class="img-hobbies" alt="League of Legends"/>
+                                        </div>
+                                        <div class="back">
+                                            <p>
+                                                Sempre gostei de jogos. Na infância, eu costumava jogar
+                                                em console, mas agora eu faço isso principalmente pelo
+                                                computador. 
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h3>Jogar</h3>
+                                <div class="flip-container">
+                                    <div class="flipper">
+                                        <div class="front">
+                                            <img src="./imagens/violao.jpg" class="img-hobbies" alt="Violão"/>
+                                        </div>
+                                        <div class="back">
+                                            <p>
+                                                Eu tenho um violão há alguns anos e eu gosto de aprender músicas
+                                                para tocar, mas acabo não fazendo isso frequentemente.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h3>Violão</h3>
+                            </div>
+                            <div class="hobbies-vertical">
+                                <div class="flip-container">
+                                    <div class="flipper">
+                                        <div class="front">
+                                            <img src="./imagens/youtube_4.jpg" class="img-hobbies" alt="Logo do Youtube"/>
+                                        </div>
+                                        <div class="back">
+                                            <p>
+                                                É a rede social que eu mais utilizo. Costumo ver vídeos sobre
+                                                vários assuntos, desde poolítica, passando por jogos, até 
+                                                sobre restaurações de peças de metal antigas.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h3>Youtube</h3>
+                                <div class="flip-container">
+                                    <div class="flipper">
+                                        <div class="front">
+                                            <img src="./imagens/volei.jpg" class="img-hobbies" alt="Vôlei"/>
+                                        </div>
+                                        <div class="back">
+                                            <p>
+                                                Vôlei é o esporte que eu mais gosto de praticar. Já pratiquei
+                                                em dois momentos quando eu estava no colégio e me divirto 
+                                                bastante jogando.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h3>Vôlei</h3>
+                            </div>
+                        </div>
+                    </section>
+                    <hr/>
+                    <section class="experiencias-section" id="experiencias">
+                        <h2>Experiências</h2>
+                        <div>
+                            <div class="paragrafos">
+                                <h4>Educação</h4>
+                                <p>
+                                    Estudei em 2 colégios: Colégio Rosa Gattorno e Colégio CBV
+                                </p>
+                                <h4>Projetos</h4>
+                                <p>
+                                    Enquanto estava no colégio, tive a oportunidade de participar de 2 projetos
+                                    para criação de aplicações: um voltado para o desenvolvimento de uma plataforma
+                                    para auxiliar alunos a como melhorar suas redações e outro quando participei de
+                                    um concurso de criação de aplicativos com alguns amigos, no qual a gente desenvolveu 
+                                    projeto para ajudar pessoas que estivessem precisando de acompanhamento
+                                    psicológico no trabalho.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+            </main>
+        </div>
+        <script src="./index.js"></script>
+    </body>
+</html>

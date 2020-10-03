@@ -1,0 +1,365 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+    background-color: #47A8BD;
+    box-sizing: border-box;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+.container {
+    display: flex;
+}
+
+.header {
+    display: flex;
+    font-size: 1rem;
+    justify-content: space-around;
+    margin: 0;
+}
+    
+.menu {
+    background-color: #9C3848;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 1;
+}
+    
+.menu li {
+    list-style: none;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: #7EBCE6;
+    padding: 13px 20px;
+    transition: background-color 500ms, color 500ms;
+}
+    
+a:hover {
+    text-decoration: underline;
+    background-color: rgb(65, 105, 225);
+    color: white;
+}
+
+i {
+    color: whitesmoke;
+}
+
+@media (max-width: 600px) {
+    .header {
+        opacity: 0;
+        z-index: -2;
+    }
+
+    .menu {
+        opacity: 0;
+        z-index: -2;
+    }
+
+    .abrir_menu {
+        background-color: #9C3848;
+        font-size: 26.33px;
+        height: 34.67px;
+        left: 0px;
+        position: fixed;
+        top: 0px;
+        width: 34.67px;
+        z-index: 4;
+    }
+    
+    .fechar_menu {
+        background-color: transparent;
+        height: 34.67px;
+        left: 0px;
+        position: fixed;
+        top: 0px;
+        width: 34.67px;
+        z-index: -1;
+    }
+    
+    .fechar_menu,
+    .abrir_menu:hover {
+        cursor: pointer;
+    }
+    
+    .fas {
+        margin-left: 5px;
+        margin-top: 4px;
+    }
+    
+    .menu_aberto {
+        background-color: #9C3848;
+        top: 0px;
+        left: -20em;
+        position: fixed;
+        /*height: 10vh;
+        width: 10vw;*/
+        transform: translateX(0);
+        opacity: 1;
+        transition: transform 500ms;
+        z-index: 3;
+    }
+    
+    .menu_animacao {
+        transform: translateX(20em);
+    }
+    
+    .menu_aberto li {
+        list-style: none;
+    }
+    
+    .menu_aberto ul {
+        margin-top: 34.67px;
+    }
+    
+    .menu_aberto a {
+        color: dodgerblue;
+        display: block;
+        padding: 10px 20px;
+        transition: background-color 500ms, color 500ms;
+    }
+    
+    .menu_aberto a:active,
+    .menu_aberto a:hover {
+        /*background-color: rgb(65,105,225);*/
+        color: white;
+    }
+
+}
+
+@media (min-width: 600px) {
+    .main {
+        transform: translateY(-8%);
+    }
+    
+    .menu_aberto {
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+.imagem-rosto {
+    float: right;
+    margin: 0;
+    margin-left: 2em;
+    margin-bottom: 1em;
+}
+
+.profile-photo {
+    border: #1E3888 solid 3px;
+    border-radius: 50%;
+    width: 13.5em;
+    height: 15em;
+    margin-bottom: 1rem;
+    animation: linear 500ms animacaoFoto forwards 1000ms;
+    transform: translateY(-100%);
+}
+
+@keyframes animacaoFoto {
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-right: 130%;
+    width: 30vw;
+    animation: linear 500ms animacaoTop forwards 500ms;
+}
+
+@keyframes animacaoTop {
+    100%{
+        margin-right: 0%;
+    }
+}
+
+.bottom {
+    border: #1E3888 solid 3px;
+    border-radius: 2em;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 200%;
+    text-align: center;
+    background-color: #F5E663;
+    animation: linear 500ms animacaoBottom forwards;
+}
+
+@keyframes animacaoBottom {
+    100%{
+        margin-left: 0%;
+    }
+}
+
+@media (max-width: 600px) {
+    .bottom {
+        display: block;
+        padding-left: 30px;
+        width: 70vw;
+    }
+}
+
+@media (min-width: 600px) {
+    .bottom {
+        display: flex;
+        width: 80vw;
+    }
+}
+
+.bottom .end-tel {
+    width: 15em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.main {
+    position: relative;
+    /*left: 25%;*/
+    margin: 1rem;
+    color: #01172F;
+}
+
+
+.section {
+    display: block;
+    align-items: center;
+    padding: 4rem 1rem 4rem 1rem;
+    max-width: 100vw;
+}
+
+.section .home-section {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    /*justify-content: space-around;*/
+    padding-top: 10vh;
+    height: 100vh;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 0;
+}
+
+hr {
+    border: solid 5px;
+    border-radius: 1em;
+    border-color: #1E3888;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.section .sobre-section, .hobbies-section, .experiencias-section {
+    padding-top: 5vh;
+    display: block;
+    min-height: 70vh;
+}
+
+.paragrafos {
+    border: #1E3888 solid 3px;
+    border-radius: 2em;
+    background-color: #F5E663;
+    box-shadow: black 5px 5px 5px;
+    text-align: justify;
+    font-size: 1em;
+    padding: 0 20px 0 20px;
+}
+
+
+.sobre-section h2, .hobbies-section h2, .experiencias-section h2 {
+    font-size: 3em;
+}
+
+.section .hobbies-div {
+    align-items: center;
+    border: #1E3888 solid 3px;
+    border-radius: 2em;
+    background-color: #F5E663;
+    box-shadow: black 5px 5px 5px;
+    margin-bottom: 16vh;
+    justify-content: space-around;
+    max-width: 100vw;
+    padding: 2rem 1rem 1rem 1rem;
+}
+
+@media (max-width: 600px) {
+    .section .hobbies-div {
+        display: block;
+    }
+
+    .front, .back {
+        width: 90%;
+        height: 90%;
+    }
+
+    .flip-container {
+        height: 150px;
+        width: 13.5em;
+        perspective: 1000px;
+    }
+}
+
+
+@media (min-width: 600px) {
+    .section .hobbies-div {
+        display: flex;
+    }
+
+    .front, .back {
+        width: 100%;
+        height: 100%;
+    }
+
+    .flip-container {
+        height: 200px;
+        width: 18em;
+        perspective: 1000px;
+    }
+}
+
+.img-hobbies {
+    border-radius: 1em;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+
+
+.flipper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-container:hover .flipper {
+    transform: rotateY(180deg);
+}
+
+.front, .back {
+    border: black solid 2px;
+    border-radius: 1em;
+    position: absolute;
+    text-align: justify;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    box-shadow: black 3px 3px 10px;
+}
+
+.back {
+    transform: rotateY(180deg);
+    background-color: whitesmoke;
+    padding: 5px;
+}
